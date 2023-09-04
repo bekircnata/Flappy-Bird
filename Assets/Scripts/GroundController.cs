@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundMoveAnimation : MonoBehaviour
+public class GroundController : MonoBehaviour
 {
     public float parallaxSpeed = 1.0f; // Hareket hýzý
     private Vector2 startPosition;
@@ -13,6 +13,11 @@ public class GroundMoveAnimation : MonoBehaviour
     }
 
     void Update()
+    {
+        GroundMovaAnimation();
+    }
+
+    void GroundMovaAnimation()
     {
         float newPosition = Mathf.Repeat(Time.time * parallaxSpeed, 1.9f);
         Debug.Log(newPosition);
