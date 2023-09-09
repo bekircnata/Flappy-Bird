@@ -14,13 +14,12 @@ public class GroundController : MonoBehaviour
 
     void Update()
     {
-        GroundMovaAnimation();
+        GroundMoveAnimation();
     }
 
-    void GroundMovaAnimation()
+    void GroundMoveAnimation()
     {
         float newPosition = Mathf.Repeat(Time.time * parallaxSpeed, 1.9f);
-        Debug.Log(newPosition);
         transform.position = startPosition + Vector2.left * newPosition;
     }
 }

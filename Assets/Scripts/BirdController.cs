@@ -16,13 +16,18 @@ public class BirdController : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        BirdControl();
+    }
+
+    void BirdControl()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            if(transform.position.y < maxYPosition)
+            if (transform.position.y < maxYPosition)
             {
                 birdRb.velocity = Vector2.up * jumpForce;
             }
         }
     }
-    
+
 }

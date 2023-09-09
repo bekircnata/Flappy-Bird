@@ -16,12 +16,14 @@ public class PipeSpawner : MonoBehaviour
 
     void Update()
     {
-        
+     
     }
 
     void SpawnPipe()
     {
         Vector3 spawnPosition = new Vector3(0, Random.Range(minHeight, maxHeight));
         GameObject newPipe = Instantiate(pipePrefab, spawnPosition, Quaternion.identity);
+
+        Destroy(newPipe, 10f);
     }
 }
