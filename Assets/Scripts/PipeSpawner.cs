@@ -5,8 +5,8 @@ using UnityEngine;
 public class PipeSpawner : MonoBehaviour
 {
     [SerializeField] private float spawnInterval = 2f;
-    [SerializeField] private float minHeight = -0.3f;
-    [SerializeField] private float maxHeight = 0.9f;
+    [SerializeField] private float minHeight = -0.2f;
+    [SerializeField] private float maxHeight = 0.7f;
     [SerializeField] private GameObject pipePrefab;
 
     void Start()
