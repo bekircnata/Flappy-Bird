@@ -420,10 +420,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8353ef7bdae3644dbfda86e9fafde39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pipePrefab: {fileID: 687370994604321910, guid: d7a60f142a2eff149882e7c4f6ec0b4d, type: 3}
   spawnInterval: 2
   minHeight: -0.3
   maxHeight: 0.9
-  pipePrefab: {fileID: 687370994604321910, guid: d7a60f142a2eff149882e7c4f6ec0b4d, type: 3}
 --- !u!4 &412494343
 Transform:
   m_ObjectHideFlags: 0
@@ -1595,6 +1595,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1184106419}
   score: 0
   isGameOver: 0
+  isPlay: 0
 --- !u!1 &1715715107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,9 +1608,9 @@ GameObject:
   - component: {fileID: 1715715109}
   - component: {fileID: 1715715108}
   - component: {fileID: 1715715112}
-  - component: {fileID: 1715715113}
-  - component: {fileID: 1715715111}
+  - component: {fileID: 1715715115}
   - component: {fileID: 1715715114}
+  - component: {fileID: 1715715111}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Bird
@@ -1742,32 +1743,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1715715113
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1715715107}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.17, y: 0.12}
-    newSize: {x: 0.17, y: 0.12}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.17, y: 0.12}
-  m_EdgeRadius: 0
 --- !u!82 &1715715114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1864,6 +1839,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!70 &1715715115
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715715107}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000007458082, y: -0.0006291867}
+  m_Size: {x: 0.15993263, y: 0.10330258}
+  m_Direction: 1
 --- !u!1 &1716888404
 GameObject:
   m_ObjectHideFlags: 0

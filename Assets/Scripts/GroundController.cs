@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundController : MonoBehaviour
 {
-    public float parallaxSpeed = 1.0f; // Hareket hýzý
+    [SerializeField] private float parallaxSpeed = 1.0f;
     private Vector2 startPosition;
 
     void Start()

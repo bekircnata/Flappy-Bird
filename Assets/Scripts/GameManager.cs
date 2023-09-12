@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public int score = 0;
     public bool isGameOver = false;
+    public bool isPlay = false;
 
     void Start()
     {
@@ -21,22 +22,21 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         scoreText.text = score.ToString();
-        GameOver();
     }
 
     public void StartGame()
     {
-        Time.timeScale = 1;
+        isPlay = true;
         startScreen.SetActive(false);
+        Time.timeScale = 1;
     }
 
-    void GameOver()
+    public void GameOver()
     {
-        if(isGameOver)
-        {
-            Time.timeScale = 0;
-            gameOverScreen.SetActive(true);
-        }
+        isGameOver = true;
+        isPlay = false;
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void RestartGame()

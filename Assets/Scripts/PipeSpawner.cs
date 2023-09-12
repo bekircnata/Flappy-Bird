@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PipeSpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject pipePrefab;
+
     [SerializeField] private float spawnInterval = 2f;
     [SerializeField] private float minHeight = -0.2f;
     [SerializeField] private float maxHeight = 0.7f;
-    [SerializeField] private GameObject pipePrefab;
 
     void Start()
     {
@@ -25,5 +26,6 @@ public class PipeSpawner : MonoBehaviour
         GameObject newPipe = Instantiate(pipePrefab, spawnPosition, Quaternion.identity);
 
         Destroy(newPipe, 10f);
+
     }
 }

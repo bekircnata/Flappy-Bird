@@ -7,8 +7,8 @@ public class BirdController : MonoBehaviour
     private Rigidbody2D birdRb;
     [SerializeField] private GameManager gameManager;
 
-    public AudioClip wingSound;
-    public AudioClip hitSound;
+    [SerializeField]  private AudioClip wingSound;
+    [SerializeField]  private AudioClip hitSound;
     private AudioSource audioSource;
 
     [SerializeField] private float jumpForce = 2f;
@@ -27,7 +27,7 @@ public class BirdController : MonoBehaviour
 
     void BirdControl()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !gameManager.isGameOver && gameManager.isPlay)
         {
             if (transform.position.y < maxYPosition)
             {
@@ -42,7 +42,7 @@ public class BirdController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground" || collision.gameObject.tag == "Pipe")
         {
-            gameManager.isGameOver = true;
+            gameManager.GameOver();
             audioSource.clip = hitSound;
             audioSource.Play();
         }
