@@ -6,6 +6,7 @@ public class BirdController : MonoBehaviour
 {
     private Rigidbody2D birdRb;
     [SerializeField] private GameManager gameManager;
+    private AudioSource audioSource;
 
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float maxYPosition = 1f;
@@ -13,6 +14,7 @@ public class BirdController : MonoBehaviour
     void Start()
     {
         birdRb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class BirdController : MonoBehaviour
             if (transform.position.y < maxYPosition)
             {
                 birdRb.velocity = Vector2.up * jumpForce;
+                audioSource.Play();
             }
         }
     }
