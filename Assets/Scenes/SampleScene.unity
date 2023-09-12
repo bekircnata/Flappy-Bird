@@ -1717,6 +1717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1687458842}
+  wingSound: {fileID: 8300000, guid: 0f5534b97856a514e9cccc74574d2f4f, type: 3}
+  hitSound: {fileID: 8300000, guid: a141558c0ce5b4d4f88d8164112f4268, type: 3}
   jumpForce: 2
   maxYPosition: 1
 --- !u!50 &1715715112
@@ -1776,8 +1778,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0f5534b97856a514e9cccc74574d2f4f, type: 3}
-  m_PlayOnAwake: 0
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1786,7 +1788,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.23169166
+  MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
