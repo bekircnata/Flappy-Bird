@@ -5,11 +5,10 @@ using UnityEngine;
 public class BirdController : MonoBehaviour
 {
     private Rigidbody2D birdRb;
+    private AudioSource audioSource;
     [SerializeField] private GameManager gameManager;
-
     [SerializeField]  private AudioClip wingSound;
     [SerializeField]  private AudioClip hitSound;
-    private AudioSource audioSource;
 
     [SerializeField] private float jumpForce = 2f;
     [SerializeField] private float maxYPosition = 1f;

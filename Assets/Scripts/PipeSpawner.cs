@@ -15,11 +15,6 @@ public class PipeSpawner : MonoBehaviour
         InvokeRepeating(nameof(SpawnPipe), 1f, spawnInterval);
     }
 
-    void Update()
-    {
-     
-    }
-
     void SpawnPipe()
     {
         Vector3 spawnPosition = new Vector3(0, Random.Range(minHeight, maxHeight));
