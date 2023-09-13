@@ -7,7 +7,7 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField] private GameObject pipePrefab;
 
     [SerializeField] private float spawnInterval = 2f;
-    [SerializeField] private float minHeight = -0.2f;
+    [SerializeField] private float minHeight = -0.15f;
     [SerializeField] private float maxHeight = 0.7f;
 
     void Start()
